@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Avatar Forge</title>
+    <link rel="stylesheet" href="assets/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="page">
+      <header class="top-bar">
+        <div class="progress">
+          <span class="step">Step 1 of 3</span>
+          <div class="progress-track">
+            <div class="progress-fill"></div>
+          </div>
+        </div>
+        <button class="help-button" aria-label="Help">
+          <span>?</span>
+        </button>
+      </header>
+
+      <main class="layout">
+        <section class="sidebar left" aria-label="Avatar options">
+          <div class="panel">
+            <h2>Face</h2>
+            <div class="option-group">
+              <h3>Presets</h3>
+              <div class="chip-row">
+                <button class="chip active">Masculine</button>
+                <button class="chip">Feminine</button>
+                <button class="chip">Androgynous</button>
+              </div>
+            </div>
+            <div class="option-group">
+              <h3>Skin Tone</h3>
+              <div class="slider"></div>
+              <div class="undertones">
+                <span class="tag">Warm</span>
+                <span class="tag">Neutral</span>
+                <span class="tag">Cool</span>
+              </div>
+            </div>
+            <div class="option-group split">
+              <div>
+                <h3>Eye Shape</h3>
+                <div class="chip-column">
+                  <button class="chip">Round</button>
+                  <button class="chip active">Almond</button>
+                  <button class="chip">Sharp</button>
+                </div>
+              </div>
+              <div>
+                <h3>Eye Color</h3>
+                <div class="swatch-grid">
+                  <span class="swatch" data-tone="hazel"></span>
+                  <span class="swatch" data-tone="blue"></span>
+                  <span class="swatch" data-tone="green"></span>
+                  <span class="swatch" data-tone="amber"></span>
+                  <span class="swatch" data-tone="violet"></span>
+                  <span class="swatch" data-tone="cyan"></span>
+                </div>
+              </div>
+            </div>
+            <div class="option-group">
+              <h3>Mouth Expression</h3>
+              <div class="pill-toggle">
+                <button class="pill">Neutral</button>
+                <button class="pill active">Smile</button>
+                <button class="pill">Thoughtful</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="panel">
+            <h2>Hair</h2>
+            <div class="option-group">
+              <h3>Length</h3>
+              <div class="chip-row">
+                <button class="chip">Short</button>
+                <button class="chip active">Medium</button>
+                <button class="chip">Long</button>
+              </div>
+            </div>
+            <div class="option-group">
+              <h3>Style</h3>
+              <div class="chip-grid">
+                <button class="chip">Straight</button>
+                <button class="chip">Curly</button>
+                <button class="chip active">Wavy</button>
+                <button class="chip">Afro</button>
+                <button class="chip">Buzzcut</button>
+                <button class="chip">Ponytail</button>
+              </div>
+            </div>
+            <div class="option-group">
+              <h3>Color Palette</h3>
+              <div class="swatch-grid wide">
+                <span class="swatch" data-tone="black"></span>
+                <span class="swatch" data-tone="brown"></span>
+                <span class="swatch" data-tone="blonde"></span>
+                <span class="swatch" data-tone="red"></span>
+                <span class="swatch" data-tone="blue"></span>
+                <span class="swatch" data-tone="purple"></span>
+                <span class="swatch" data-tone="green"></span>
+                <span class="swatch" data-tone="silver"></span>
+              </div>
+            </div>
+          </div>
+
+          <div class="panel">
+            <h2>Outfit</h2>
+            <div class="card-grid">
+              <article class="card active">
+                <h3>Minimalist Hoodie</h3>
+                <p>Cozy &amp; casual</p>
+              </article>
+              <article class="card">
+                <h3>Sleek Suit</h3>
+                <p>Professional focus</p>
+              </article>
+              <article class="card">
+                <h3>Futuristic Jumpsuit</h3>
+                <p>Sci-fi explorer</p>
+              </article>
+              <article class="card">
+                <h3>Creative Robe</h3>
+                <p>Artistic flair</p>
+              </article>
+              <article class="card">
+                <h3>Gamer Streetwear</h3>
+                <p>Edgy energy</p>
+              </article>
+            </div>
+          </div>
+
+          <div class="panel">
+            <h2>Accessories</h2>
+            <div class="chip-grid">
+              <button class="chip">Glasses</button>
+              <button class="chip">Headphones</button>
+              <button class="chip active">Visor</button>
+              <button class="chip">Beanie</button>
+              <button class="chip">Helmet</button>
+              <button class="chip">Jewelry</button>
+              <button class="chip">Mask</button>
+              <button class="chip">Robotic Arm</button>
+              <button class="chip">Holographic Pet</button>
+            </div>
+          </div>
+        </section>
+
+        <section class="preview" aria-label="3D avatar preview">
+          <div class="preview-frame">
+            <div class="preview-halo"></div>
+            <div class="avatar-stand"></div>
+            <div class="avatar-placeholder">
+              <div class="face"></div>
+              <div class="torso"></div>
+              <div class="arm left"></div>
+              <div class="arm right"></div>
+              <div class="companion"></div>
+            </div>
+            <button class="control rotate" aria-label="Rotate avatar">
+              <span>⟳</span>
+            </button>
+            <div class="camera-controls">
+              <button aria-label="Zoom in">+</button>
+              <button aria-label="Zoom out">−</button>
+            </div>
+          </div>
+          <section class="skills">
+            <header>
+              <h2>AI Skill Loadout</h2>
+              <p>Distribute skill points to tailor your companion.</p>
+            </header>
+            <div class="skills-grid">
+              <article class="skill-card">
+                <div class="skill-header">
+                  <span>Web Search</span>
+                  <span class="points">3/5</span>
+                </div>
+                <div class="meter"><span style="width: 60%"></span></div>
+              </article>
+              <article class="skill-card active">
+                <div class="skill-header">
+                  <span>Image Generation</span>
+                  <span class="points">4/5</span>
+                </div>
+                <div class="meter"><span style="width: 80%"></span></div>
+              </article>
+              <article class="skill-card">
+                <div class="skill-header">
+                  <span>Video Generation</span>
+                  <span class="points">2/5</span>
+                </div>
+                <div class="meter"><span style="width: 40%"></span></div>
+              </article>
+              <article class="skill-card">
+                <div class="skill-header">
+                  <span>Research Assistant</span>
+                  <span class="points">5/5</span>
+                </div>
+                <div class="meter"><span style="width: 100%"></span></div>
+              </article>
+              <article class="skill-card">
+                <div class="skill-header">
+                  <span>Creative Writing</span>
+                  <span class="points">3/5</span>
+                </div>
+                <div class="meter"><span style="width: 60%"></span></div>
+              </article>
+            </div>
+            <footer class="skill-footer">
+              <p>Points Remaining: <strong>2</strong></p>
+              <div class="pill-toggle mini">
+                <button class="pill">Auto-Allocate</button>
+                <button class="pill active">Manual</button>
+              </div>
+            </footer>
+          </section>
+        </section>
+
+        <aside class="sidebar right" aria-label="Color controls and randomizer">
+          <div class="panel">
+            <h2>Palette</h2>
+            <div class="option-group">
+              <h3>Hair</h3>
+              <input type="color" value="#6b4dff" />
+            </div>
+            <div class="option-group">
+              <h3>Outfit</h3>
+              <input type="color" value="#2de2e6" />
+            </div>
+            <div class="option-group">
+              <h3>Accessories</h3>
+              <input type="color" value="#ff6f61" />
+            </div>
+          </div>
+          <div class="panel">
+            <button class="randomize">Randomize Build</button>
+            <p class="tip">Feeling lucky? Give your companion a spontaneous remix.</p>
+          </div>
+        </aside>
+      </main>
+
+      <footer class="toolbar">
+        <button class="ghost">Back</button>
+        <button class="primary">Next</button>
+        <button class="outline">Save Preset</button>
+      </footer>
+    </div>
+  </body>
+</html>
